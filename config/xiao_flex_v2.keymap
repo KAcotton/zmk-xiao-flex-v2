@@ -122,7 +122,7 @@
 
         layer_5 {
             bindings = <
-&bootloader  &none         &none         &none         &none         &tog 6               &none   &none      &none      &none     &none     &bootloader
+&bootloader  &none         &none         &none         &none         &none                &tog 6  &none      &none      &none     &none     &bootloader
 &none        &kp K_PREV    &kp K_VOL_UP  &kp K_VOL_DN  &kp K_NEXT    &ext_power EP_TOG    &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LWIN  &none
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG         &none   &none      &none      &none     &none     &none
                            &trans        &trans                                           &trans             &trans     &trans
@@ -135,7 +135,7 @@
 
         layer_6 {
             bindings = <
-&trans  &kp TAB    &kp M   &kp W     &kp H         &kp NUMBER_1    &trans  &trans  &trans       &trans  &trans  &trans
+&trans  &kp TAB    &kp M   &kp W     &kp H         &kp NUMBER_1    &tog 6  &trans  &trans       &trans  &trans  &trans
 &trans  &kp LSHFT  &kp A   &kp S     &kp D         &kp NUMBER_2    &trans  &trans  &trans       &trans  &trans  &trans
 &trans  &kp C      &kp G   &trans    &kp NUMBER_3  &kp Q           &trans  &trans  &trans       &trans  &trans  &trans
                    &trans  &trans                                  &trans          &trans       &trans
