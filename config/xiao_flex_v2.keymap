@@ -139,8 +139,8 @@
 &trans  &kp LSHFT  &kp A   &kp S     &kp D         &kp NUMBER_2    &trans  &trans  &trans  &trans  &trans  &trans
 &tog 0  &kp C      &kp G   &trans    &kp NUMBER_3  &kp Q           &trans  &trans  &trans  &trans  &trans  &trans
                    &trans  &trans                                  &trans          &trans  &trans
-                           &mkp MB3  &kp E         &kp X           &trans  &trans  &trans
-                           &kp R     &kp SPACE     &kp LALT
+                           &mkp MB3  &kp LALT      &kp X           &trans  &trans  &trans
+                           &kp R     &kp SPACE     &kp E
             >;
         };
     };
