@@ -1,0 +1,31 @@
+/* Board-specific SPI/trackball remap for the right half, applied on top of
+ * xiao_flex_v2_right.overlay when built for board=nice_nano_v2. */
+
+/* the Xiao's bit-banged spi0 wiring doesn't apply on nice_nano_v2 */
+&spi0 {
+    status = "disabled";
+};
+
+/* nice!nano v2 exposes a dedicated spi1 bus on D14(MISO)/D15(MOSI)/D16(SCK) via
+ * the pro_micro_spi alias, with pinctrl already provided by the nice_nano_v2
+ * board files. */
+&pro_micro_spi {
+    status = "okay";
+    /* CS on pro_micro D20 (P0.29) */
+    cs-gpios = <&pro_micro 20 GPIO_ACTIVE_LOW>;
+
+    trackball_pm: trackball@0 {
+        status = "okay";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        /* IRQ on pro_micro D21 (P0.31) */
+        irq-gpios = <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        scroll-layers = <4>;
+        snipe-layers = <1>;
+    };
+};
+
+&trackball_listener {
+    device = <&trackball_pm>;
+};

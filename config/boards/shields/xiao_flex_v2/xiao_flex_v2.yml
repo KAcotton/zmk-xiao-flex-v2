@@ -3,6 +3,5 @@ id: xiao_flex_v2
 Name: xiao_flex_v2
 type: shield
 url: https://github.com/WainingForests/zmk-config-xiao-flex-v2/
-requires: [seeed_xiao]
 features:
   - keys
